@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumindoServico", "Consum
 		{DC051935-60F4-4EEA-B174-C5EB962413A7} = {DC051935-60F4-4EEA-B174-C5EB962413A7}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WCF", "WCF", "{7A811499-AC07-447D-87D3-7A1B5D5CD7AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,5 +35,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DC051935-60F4-4EEA-B174-C5EB962413A7} = {7A811499-AC07-447D-87D3-7A1B5D5CD7AE}
+		{304B1840-B0FF-43A9-B305-AD7761B86B82} = {7A811499-AC07-447D-87D3-7A1B5D5CD7AE}
+		{CB0E220A-544C-4BB3-BB9C-9EEFCD1EEF76} = {7A811499-AC07-447D-87D3-7A1B5D5CD7AE}
 	EndGlobalSection
 EndGlobal
