@@ -1,0 +1,45 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<form action="/Produto/Adiciona" method="post">
+    @Html.AntiForgeryToken()
+    <label for="nome"> Nome:</label>
+    <input id="nome" name="produto.Nome" value="@ViewBag.Produtos.Nome" class="form-control" />
+    @Html.ValidationMessage("produto.Nome")
+    @Html.ValidationMessage("produto.InformaticaComPrecoInvalido")
+    <br>
+    <label for="preco"> Preço:</label>
+    <input id="preco" name="produto.Preco" value="@ViewBag.Produtos.Preco" class="form-control" />
+    @Html.ValidationMessage("produto.Preco")
+
+
+    <br>
+    <label for="quantidade"> Quantidade:</label>
+    <input id="quantidade" name="produto.Quantidade" value="@ViewBag.Produtos.Quantidade" class="form-control" />
+    @Html.ValidationMessage("produto.Quantidade")
+
+
+    <br>
+    <label for="descricao"> Descrição:</label>
+    <input id="descricao" name="produto.Descricao" value="@ViewBag.Produtos.Descricao" class="form-control" />
+    @Html.ValidationMessage("produto.Descricao")
+
+
+    <br>
+    <label for="categoria"> Categoria:</label>
+    <select id="categoria" name="produto.CategoriaId" class="form-control">
+        @foreach (var categoria in ViewBag.Categorias)
+        {
+            <option value="@categoria.Id" selected="@categoria.Id.Equals(ViewBag.Produtos.CategoriaId)">
+                @categoria.Nome
+            </option>
+        }
+    </select>
+    <br>
+
+    <input type="submit" />
+</form>
+
